@@ -115,20 +115,22 @@ def combine_orthopedic_profiles(conditions):
 def select_top_3_exercises(combined_profile):
     """
     Select exactly 3 orthopedic exercises
-    based on the combined safety constraints.
+    with maximum movement diversity while
+    respecting all safety constraints.
     """
 
-    # Build path to exercises.json
+    import json
+    import os
+
+    # Load exercise database
     data_path = os.path.join(
         os.path.dirname(__file__),
         "..", "data", "exercises.json"
     )
-
-    # Load exercise database
     with open(data_path, "r") as f:
         exercises = json.load(f)
 
-    # Filter exercises based on movement type and joint load
+    # Step 1: Filter exercises by safety rules
     safe_exercises = [
         ex for ex in exercises
         if ex["movement_type"] in combined_profile["allowed_movements"]
@@ -138,5 +140,31 @@ def select_top_3_exercises(combined_profile):
         )
     ]
 
-    # Return only the first 3 (avoid user overload)
-    return safe_exercises[:3]
+    # Step 2: Group exercises by movement type
+    grouped = {
+        "seated": [],
+        "standing_supported": [],
+        "walking": []
+    }
+
+    for ex in safe_exercises:
+        grouped[ex["movement_type"]].append(ex)
+
+    # Step 3: Pick exercises with diversity
+    selected = []
+
+    for movement in ["seated", "standing_supported", "walking"]:
+        if grouped[movement]:
+            selected.append(grouped[movement][0])
+        if len(selected) == 3:
+            break
+
+    # Step 4: Fill remaining slots if needed
+    if len(selected) < 3:
+        for ex in safe_exercises:
+            if ex not in selected:
+                selected.append(ex)
+            if len(selected) == 3:
+                break
+
+    return selected
