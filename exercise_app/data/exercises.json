@@ -1,0 +1,145 @@
+[
+    {
+      "name": "Seated Knee Extension",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=QZy9QbQJZJ8",
+      "tip": "Lift slowly and stop if knee pain increases."
+    },
+    {
+      "name": "Ankle Pumps",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=JXGJm0XKcD8",
+      "tip": "Move ankles rhythmically for circulation."
+    },
+    {
+      "name": "Seated Hamstring Stretch",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=2U4hQy0z1Xk",
+      "tip": "Hold gently without bouncing."
+    },
+    {
+      "name": "Seated Marching",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=G5nFzH5yXgA",
+      "tip": "Lift knees slowly with control."
+    },
+    {
+      "name": "Seated Heel Slides",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=5k7y8yK2c5I",
+      "tip": "Slide heel only until comfortable."
+    },
+    {
+      "name": "Seated Calf Raises",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=YMmgqO8Jo-k",
+      "tip": "Raise heels slowly and lower with control."
+    },
+    {
+      "name": "Seated Hip Abduction",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=6gZfZ8JY5yE",
+      "tip": "Move knees outward gently."
+    },
+    {
+      "name": "Seated Arm Raises",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=H3FJ3zqz5Zk",
+      "tip": "Raise arms without shrugging shoulders."
+    },
+    {
+      "name": "Seated Shoulder Rolls",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=1zYpK4l8G6Y",
+      "tip": "Roll shoulders slowly and smoothly."
+    },
+    {
+      "name": "Seated Torso Twist",
+      "movement_type": "seated",
+      "joint_load": "very_low",
+      "youtube_link": "https://www.youtube.com/watch?v=E2Uj8VJ8GxE",
+      "tip": "Twist only within pain-free range."
+    },
+  
+    {
+      "name": "Supported Standing March",
+      "movement_type": "standing_supported",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=V7Z9E6G5m3E",
+      "tip": "Hold a chair or wall for balance."
+    },
+    {
+      "name": "Standing Heel Raises (Supported)",
+      "movement_type": "standing_supported",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=Z7pU0Wz3c6I",
+      "tip": "Rise slowly and keep weight evenly distributed."
+    },
+    {
+      "name": "Standing Side Leg Raise",
+      "movement_type": "standing_supported",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=kYpYcY1zG3E",
+      "tip": "Keep torso upright while lifting leg."
+    },
+    {
+      "name": "Standing Hip Extension",
+      "movement_type": "standing_supported",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=Kp2QZJ5fH2Y",
+      "tip": "Extend leg backward slowly."
+    },
+    {
+      "name": "Mini Squat (Chair Support)",
+      "movement_type": "standing_supported",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=Zz6P4zU8GxE",
+      "tip": "Lower slightly and keep knees aligned."
+    },
+  
+    {
+      "name": "Slow Walking",
+      "movement_type": "walking",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=example_walk1",
+      "tip": "Walk at a comfortable pace."
+    },
+    {
+      "name": "Indoor Walking",
+      "movement_type": "walking",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=example_walk2",
+      "tip": "Use a flat surface and supportive shoes."
+    },
+    {
+      "name": "Treadmill Walking (Slow)",
+      "movement_type": "walking",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=example_walk3",
+      "tip": "Avoid incline and walk steadily."
+    },
+    {
+      "name": "Marching in Place",
+      "movement_type": "walking",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=example_walk4",
+      "tip": "Lift feet gently without impact."
+    },
+    {
+      "name": "Heel-to-Toe Walking",
+      "movement_type": "walking",
+      "joint_load": "low",
+      "youtube_link": "https://www.youtube.com/watch?v=example_walk5",
+      "tip": "Focus on balance and control."
+    }
+  ]
+  

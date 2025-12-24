@@ -63,3 +63,47 @@ ORTHOPEDIC_PROFILES = {
         "note": "General orthopedic beginner plan"
     }
 }
+
+def combine_orthopedic_profiles(conditions):
+    """
+    Combine multiple orthopedic condition profiles into
+    one final safe constraint set.
+    """
+
+    # Default to 'none' if no condition is provided
+    if not conditions:
+        conditions = ["none"]
+
+    # Filter valid conditions only
+    profiles = [
+        ORTHOPEDIC_PROFILES[c]
+        for c in conditions
+        if c in ORTHOPEDIC_PROFILES
+    ]
+
+    # Start with the first profile
+    combined = profiles[0].copy()
+
+    for profile in profiles[1:]:
+        # Allowed movements: intersection
+        combined["allowed_movements"] = list(
+            set(combined["allowed_movements"]) &
+            set(profile["allowed_movements"])
+        )
+
+        # Joint load: choose the strictest
+        if profile["max_joint_load"] == "very_low":
+            combined["max_joint_load"] = "very_low"
+
+        # Pace: choose slowest
+        pace_priority = ["slow", "slow_steady", "steady"]
+        combined["pace"] = min(
+            combined["pace"],
+            profile["pace"],
+            key=lambda p: pace_priority.index(p)
+        )
+
+        # Progression remains conservative
+        combined["progression"] = "increase_time"
+
+    return combined
