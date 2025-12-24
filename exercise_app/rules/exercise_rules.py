@@ -1,5 +1,8 @@
 # exercise_app/rules/exercise_rules.py
 
+import json
+import os
+
 """
 Orthopedic condition profiles.
 Each profile defines how a medical condition constrains
@@ -107,3 +110,33 @@ def combine_orthopedic_profiles(conditions):
         combined["progression"] = "increase_time"
 
     return combined
+
+
+def select_top_3_exercises(combined_profile):
+    """
+    Select exactly 3 orthopedic exercises
+    based on the combined safety constraints.
+    """
+
+    # Build path to exercises.json
+    data_path = os.path.join(
+        os.path.dirname(__file__),
+        "..", "data", "exercises.json"
+    )
+
+    # Load exercise database
+    with open(data_path, "r") as f:
+        exercises = json.load(f)
+
+    # Filter exercises based on movement type and joint load
+    safe_exercises = [
+        ex for ex in exercises
+        if ex["movement_type"] in combined_profile["allowed_movements"]
+        and (
+            combined_profile["max_joint_load"] == "low"
+            or ex["joint_load"] == "very_low"
+        )
+    ]
+
+    # Return only the first 3 (avoid user overload)
+    return safe_exercises[:3]
